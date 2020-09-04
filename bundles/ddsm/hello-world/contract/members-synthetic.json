@@ -66,30 +66,6 @@
                     },
                     "age": {
                         "2020-07-22T09:01:20.241521": "Age"
-                    },
-                    "member_preferred_communication_channel": {
-                        "2020-07-22T09:01:20.308612": "Enumeration of communication channels"
-                    },
-                    "member_flu_shot_date": {
-                        "2020-07-22T09:01:20.375433": "Member Flu Shot Date"
-                    },
-                    "member_do_not_call": {
-                        "2020-07-22T09:01:20.477268": "DNC Status for Member"
-                    },
-                    "member_phone_number": {
-                        "2020-07-22T09:01:20.994848": "Member phone number"
-                    },
-                    "member_health_plan":{
-                        "2020-07-22T09:01:20.994818" : "Member Health Plan"
-                    },
-                    "appointment_date":{
-                        "2020-07-22T09:01:20.994818": "Member Health Plan"
-                    },
-                    "appointment_type":{
-                        "2020-07-22T09:01:20.994818": "Member Appointment Type"
-                    },
-                    "provider_id":{
-                        "2020-07-22T09:01:20.994818": "Provider ID"
                     }
                 },
                 "schema": {}
@@ -161,7 +137,7 @@
                                 1,
                                 0.5
                             ],
-                            "column_name": "age-group"
+                            "column_name": "age"
                         }
                     }
                 }
