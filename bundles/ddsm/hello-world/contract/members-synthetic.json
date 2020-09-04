@@ -1,0 +1,177 @@
+{
+    "synthetic": {
+        "members": {
+            "description": "Synthetic builder Members",
+            "version": "v0.00",
+            "status": "discovery",
+            "connectors": {
+                "outcome": {
+                    "raw_uri": "${PWD}/projects/hsbc-certifai/data/persist/hadron_synthetic_hk_income_outcome.pickle",
+                    "raw_module_name": "ds_discovery.handlers.pandas_handlers",
+                    "raw_handler": "PandasPersistHandler",
+                    "raw_version": "v00",
+                    "modified": 0,
+                    "raw_kwargs": {},
+                    "aligned": true
+                },
+                "pm_synthetic_hk_income": {
+                    "raw_uri": "${PWD}/projects/hsbc-certifai/contracts/hadron_pm_synthetic_hk_income.json",
+                    "raw_module_name": "ds_discovery.handlers.pandas_handlers",
+                    "raw_handler": "PandasPersistHandler",
+                    "raw_version": "v00",
+                    "modified": 0,
+                    "raw_kwargs": {},
+                    "aligned": false
+                },
+                "template_source": {
+                    "raw_uri": "${PWD}/projects/hsbc-certifai/data/persist",
+                    "raw_module_name": "ds_discovery.handlers.pandas_handlers",
+                    "raw_handler": "PandasSourceHandler",
+                    "raw_version": "v00",
+                    "modified": 0,
+                    "raw_kwargs": {},
+                    "aligned": false
+                },
+                "template_persist": {
+                    "raw_uri": "${PWD}/projects/hsbc-certifai/data/persist",
+                    "raw_module_name": "ds_discovery.handlers.pandas_handlers",
+                    "raw_handler": "PandasPersistHandler",
+                    "raw_version": "v00",
+                    "modified": 0,
+                    "raw_kwargs": {},
+                    "aligned": false
+                }
+            },
+            "snapshot": {},
+            "run_book": {},
+            "meta": {
+                "module": [
+                    "ds_behavioral",
+                    "managers",
+                    "synthetic_property_manager"
+                ],
+                "class": "SyntheticPropertyManager"
+            },
+            "knowledge": {
+                "describe": {},
+                "intent": {
+                    "member_id": {
+                        "2020-07-22T09:01:19.923290": "A unique member_id limited to one million-1"
+                    },
+                    "member_email": {
+                        "2020-07-22T09:01:19.987501": "member email address"
+                    },
+                    "gender": {
+                        "2020-07-22T09:01:20.053204": "A gender catagory of Males and Females"
+                    },
+                    "age": {
+                        "2020-07-22T09:01:20.241521": "Age"
+                    },
+                    "member_preferred_communication_channel": {
+                        "2020-07-22T09:01:20.308612": "Enumeration of communication channels"
+                    },
+                    "member_flu_shot_date": {
+                        "2020-07-22T09:01:20.375433": "Member Flu Shot Date"
+                    },
+                    "member_do_not_call": {
+                        "2020-07-22T09:01:20.477268": "DNC Status for Member"
+                    },
+                    "member_phone_number": {
+                        "2020-07-22T09:01:20.994848": "Member phone number"
+                    },
+                    "member_health_plan":{
+                        "2020-07-22T09:01:20.994818" : "Member Health Plan"
+                    },
+                    "appointment_date":{
+                        "2020-07-22T09:01:20.994818": "Member Health Plan"
+                    },
+                    "appointment_type":{
+                        "2020-07-22T09:01:20.994818": "Member Appointment Type"
+                    },
+                    "provider_id":{
+                        "2020-07-22T09:01:20.994818": "Provider ID"
+                    }
+                },
+                "schema": {}
+            },
+            "intent": {
+                "member_id": {
+                    "0": {
+                        "get_number": {
+                            "intent_creator": "lkrishna",
+                            "range_value": 100000,
+                            "to_value": 1000000,
+                            "precision": 0,
+                            "at_most": 1,
+                            "column_name": "member_id"
+                        }
+                    }
+                },
+                "member_email": {
+                    "0": {
+                        "get_category": {
+                            "intent_creator": "lkrishna",
+                            "selection": [
+                                "member@gmail.com",
+                                "member@yahoo.com",
+                                "member@msn.com"
+                            ],
+                            "weight_pattern": [
+                                5,
+                                2,
+                                1
+                            ],
+                            "column_name": "member_email"
+                        }
+                    }
+                },
+                "gender": {
+                    "0": {
+                        "get_category": {
+                            "intent_creator": "doatridge",
+                            "selection": [
+                                "M",
+                                "F"
+                            ],
+                            "weight_pattern": [
+                                3,
+                                5
+                            ],
+                            "column_name": "gender"
+                        }
+                    }
+                },
+                "age": {
+                    "0": {
+                        "get_category": {
+                            "intent_creator": "doatridge",
+                            "selection": [
+                                "15-19",
+                                "20-29",
+                                "30-39",
+                                "40-49",
+                                "50-59",
+                                ">=60"
+                            ],
+                            "weight_pattern": [
+                                2,
+                                4,
+                                5,
+                                3,
+                                1,
+                                0.5
+                            ],
+                            "column_name": "age-group"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "config_meta": {
+        "uid": "c4c034cd-41cc-4d5a-bc4d-ca9f03cb5276",
+        "create": "2020-07-22 10:52:48.982025",
+        "modify": "2020-07-22 10:54:17.736751",
+        "release": "2.09.007"
+    }
+}
